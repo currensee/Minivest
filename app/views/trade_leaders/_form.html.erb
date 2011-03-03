@@ -1,0 +1,29 @@
+<%= form_for(@trade_leader) do |f| %>
+  <% if @trade_leader.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trade_leader.errors.count, "error") %> prohibited this trade_leader from being saved:</h2>
+
+      <ul>
+      <% @trade_leader.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @trade_leader.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @trade_leader.last_name %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @trade_leader.bio %>
+</p>
+
+
+<%= link_to 'Edit', edit_trade_leader_path(@trade_leader) %> |
+<%= link_to 'Back', trade_leaders_path %>

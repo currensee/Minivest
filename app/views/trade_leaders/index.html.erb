@@ -1,0 +1,27 @@
+<h1>Listing trade_leaders</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Bio</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @trade_leaders.each do |trade_leader| %>
+  <tr>
+    <td><%= trade_leader.first_name %></td>
+    <td><%= trade_leader.last_name %></td>
+    <td><%= trade_leader.bio %></td>
+    <td><%= link_to 'Show', trade_leader %></td>
+    <td><%= link_to 'Edit', edit_trade_leader_path(trade_leader) %></td>
+    <td><%= link_to 'Destroy', trade_leader, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Trade leader', new_trade_leader_path %>

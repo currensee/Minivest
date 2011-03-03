@@ -1,4 +1,6 @@
 Minivest::Application.routes.draw do
+  devise_for :users
+
   resources :trade_leaders
 
   # The priority is based upon order of creation:

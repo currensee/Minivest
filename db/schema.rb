@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110303201845) do
+ActiveRecord::Schema.define(:version => 20110303203518) do
 
   create_table "trade_leaders", :force => true do |t|
     t.string   "first_name"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20110303201845) do
     t.text     "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "ticker"
   end
 
 end
